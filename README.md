@@ -1,4 +1,6 @@
 **Accelerating Geospatial DBSCAN Clustering Based on Vincenty Distance**
+
+
 DBSCAN clustering is a commonly used clustering algorithm that focuses on spatial differences among points. This implementation replaces the usual Euclidean Distance with Vincenty Distance for measuring the geospatial distance between two points.
 
 Parallel algorithms implemented:
