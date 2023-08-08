@@ -17,7 +17,7 @@ https://colab.research.google.com/drive/1uXOLtt-eOH6h_w-r-gZJbtKAhW_3atC7?usp=sh
 DBSCAN calls the function gather_points which starts the process for computing Vincenty distance. The CUDA implementation parallelizes this section and calculates the distance for several points faster than typical serial operations.
 
 
-**Execution time comparison between sequential and parallel**
+**Execution time comparison between sequential and parallel:**
 
 | Number of Coordinates | C++ Run Time | CUDA Run Time | Performance |
 | --- | --- | --- | --- |
@@ -28,7 +28,7 @@ DBSCAN calls the function gather_points which starts the process for computing V
 
 All implementations of the program except for C++ and CUDA with 100,000 data points were run for a minimum of 10 runs to get the average execution time. With 100,000 data points, C++ takes a long time to run (~2.6 hours per run), while CUDA had inconsistent results. All run time in the table recorded are in microseconds.
 
-**Detailed analysis and discussion of results**
+**Detailed analysis and discussion of results:**
 
 With CUDA, it was initially thought to parallelize two parts of the gather_points function - one is the section where lambda is computed, and the other is the actual computation of the distance between a potential core point vs all other data points in the dataset. Upon doing multiple runs, it turned out that lambda computation did not require parallelization as the computation usually converged early hence the distance function is the focus of the parallelization.
 
