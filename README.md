@@ -38,3 +38,5 @@ An interesting thing to note with the execution is that CUDA is generally faster
 
 Improvements on the code can still be done such as re-inventing the creation of neighbor array as it is currently allocated with the size of the full dataset and needs an extra step of trimming of zero values from the array to arrive at the final neighbor array with only the qualified core data points.
 
+**Link for the video demo**
+https://drive.google.com/file/d/1kM3Z-UaFIMSluaZiCrxUyV4xj6hUKyMr/view?usp=drive_link
